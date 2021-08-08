@@ -9,7 +9,7 @@ export default function mentors(props){
         description.style.display = (description.style.display == 'block') ? 'none' : 'block';
     }
     return (
-        <div id = 'MarySmith' className = 'AlgoMentor'>
+        <div id = 'RobertSmith' className = 'AlgoMentor'>
             <img src = {RobertSmithJPG} alt = 'portrait'></img>
             <h1 className = 'fullName'>Robert Smith</h1>
             <ul>

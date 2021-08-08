@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  width: 100%;
   font-family: Verdana, Tahoma, sans-serif;
 }
 
@@ -13,9 +14,10 @@ ul{
 
 header {
   background-color:	#52593c; 
-  position: relative;
-  top:0;
+  color:white;
   display: flex;
+  flex:auto;
+  flex-direction: row;
   color: white;
   z-index: 1;
 }
@@ -27,20 +29,24 @@ header img{
 nav {
   width: 100%;
   height: 100px;
-  
 }
 
 nav ul {
-  padding: 0 1em;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height:100%;
-  margin:0;  
+  height:100px;
+  margin: 0;  
 }
 
 nav li{
-  padding: 0 1em;
+  height: 100%;
+  width: 25%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
 }
 
 nav li a{
@@ -50,8 +56,12 @@ nav li a{
   text-decoration: none;
 }
 
-nav li a:hover,:focus,:visited{
+nav li:hover{
   background-color: #202b40;
+}
+
+nav li a:hover,:focus{
+  color:#f15c4b;
   border-bottom: 1px;
 }
 
@@ -94,6 +104,7 @@ input[type = 'checkbox']:checked {
   padding:0.3em;
   position: sticky;
   top:0;
+  z-index: 1;
 }
 
 /*Mentors----------------------*/
@@ -116,7 +127,7 @@ input[type = 'checkbox']:checked {
   margin: 0 2em 2em 2em;
 }
 
-.mentors div :nth-of-type(){
+.mentors #RobertSmith{
   margin-bottom: 0;
 }
 
@@ -143,38 +154,42 @@ input[type = 'checkbox']:checked {
 }
 
 .mentors .fullName{
-  width:10em;
+  width:40%;
   border-radius:15em;
+  margin: 1em 30%;
 }
 
 .mentors ul{
   display:flex;
+  margin: 1em;
   justify-content: space-around;
 }
 
 .mentors li{
   padding: 2px;
-  background-color: 	#424f67;
+  background-color: #424f67;
   color:white;
   width:10em;
   border-radius:5em;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.mentorsbutton {
+.mentors button {
+  border-style: hidden;
   display: inline-block;
-  padding: 1rem 2rem;
   margin: 0;
   color: #202b40;
   cursor: pointer;
   -webkit-appearance: none;
-  height:3em;
-  width:3em;
-  border-radius: 1.5em;
+  border-radius: .5em;
+  border:none;
+  background-color: #9aa493;
 }
 
-.mentors button:hover,
-.mentors button:focus {
-    background: #9aa493;
+.mentors button:hover,:focus,:visited{
+  background: #4d4d4d;
 }
 
 #JamesSmithDescription{
@@ -204,8 +219,8 @@ input[type = 'checkbox']:checked {
 /*footer-----------------------*/
 
 footer{
-  padding: 2em;
-  background-color: 	#52593c; 
+  padding:2em 0;
+  background-color: #52593c; 
   width:100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -226,16 +241,20 @@ footer img{
     display:flex;
     align-items:center;
     flex-direction: column;
-    padding: 1em;
     position:relative;
-    right:0;
-    height:100%;            
+    width: 100%;
+    height: 270px;            
   }
 
   nav ul{
     display:flex;
     flex-direction: column;
-    height:100%;
+    height:200px;
+  }
+
+  nav ul li{
+    width:40%;
+    padding: 0 30%;
   }
 
   .mentors{

@@ -72,11 +72,12 @@ function App(props) {
         <h1 id ='highlight' aria-hidden = 'true'>Mentors</h1>
         <div className = 'filters'>
           <ul>
-              <AI filterToApp = {filterToApp}/>
-              <FE filterToApp = {filterToApp}/>
-              <Algo filterToApp = {filterToApp}/>
-              <Sec filterToApp = {filterToApp}/>
-              <DS filterToApp = {filterToApp}/>
+            <li>Filters:</li>
+            <AI filterToApp = {filterToApp}/>
+            <FE filterToApp = {filterToApp}/>
+            <Algo filterToApp = {filterToApp}/>
+            <Sec filterToApp = {filterToApp}/>
+            <DS filterToApp = {filterToApp}/>
           </ul>
           <p id = 'changing'></p>
         </div>
