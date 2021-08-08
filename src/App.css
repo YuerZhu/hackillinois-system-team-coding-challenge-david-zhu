@@ -1,38 +1,256 @@
+/*All--------------------------*/
+
 .App {
   text-align: center;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul{
+  list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*Header-----------------------*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background-color:	#52593c; 
+  position: relative;
+  top:0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+header img{
+  margin:  1em 2em 1em 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav {
+  width: 100%;
+  height: 100px;
+  
+}
+
+nav ul {
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height:100%;
+  margin:0;  
+}
+
+nav li{
+  padding: 0 1em;
+}
+
+nav li a{
+  font-size: 1em;
+  font-weight: bold;
+  color:white;
+  text-decoration: none;
+}
+
+nav li a:hover,:focus,:visited{
+  background-color: #202b40;
+  border-bottom: 1px;
+}
+
+/*Checkbox----------------------*/
+
+input{
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.filters ul{
+  display:flex;
+  justify-content: space-around;
+  list-style:outside;
+  list-style-type: none;
+}
+
+input[type = 'checkbox'] {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  vertical-align: -2.5px;
+  background-color:rgb(224, 224, 224);
+  border: 1px #52593c;
+}
+
+input[type = 'checkbox']:hover {
+  background-color: #8c9768;
+}
+
+input[type = 'checkbox']:checked {
+  background-color: #52593c;
+}
+
+#highlight{
+  background-color: #f15c4b;
+  display:block;
+  color:white;
+  font-weight: bold;
+  padding:0.3em;
+  position: sticky;
+  top:0;
+}
+
+/*Mentors----------------------*/
+
+.mentors{
+  align-items:center;
+  flex-flow:row wrap;
+  max-height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin:5em;
+  padding: 0 1em;
+}
+
+.mentors div{
+  width: 100%;
+  background-color: #9aa493;
+  display: flexbox;
+  flex-direction: row;
+  margin: 0 2em 2em 2em;
+}
+
+.mentors div :nth-of-type(){
+  margin-bottom: 0;
+}
+
+.mentors::-webkit-scrollbar {
+  width: 20px;
+  margin-right: 5px;
+  background-color:#8c9768;
+}
+
+.mentors::-webkit-scrollbar-thumb {
+  background: #52593c;
+}
+
+.mentors::-webkit-scrollbar-corner{
+  display:none;
+}
+
+.mentors img{
+  flex:1;
+  max-width: 4em;
+  max-height: 4em;
+  padding: 3%;
+  align-self: left;
+}
+
+.mentors .fullName{
+  width:10em;
+  border-radius:15em;
+}
+
+.mentors ul{
+  display:flex;
+  justify-content: space-around;
+}
+
+.mentors li{
+  padding: 2px;
+  background-color: 	#424f67;
+  color:white;
+  width:10em;
+  border-radius:5em;
+}
+
+.mentorsbutton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0;
+  color: #202b40;
+  cursor: pointer;
+  -webkit-appearance: none;
+  height:3em;
+  width:3em;
+  border-radius: 1.5em;
+}
+
+.mentors button:hover,
+.mentors button:focus {
+    background: #9aa493;
+}
+
+#JamesSmithDescription{
+  padding :2em;
+  display: none;
+  text-align: left;
+}
+
+#LindaSmithDescription{
+  padding :2em;
+  display: none;
+  text-align: left;
+}
+
+#MarySmithDescription{
+  padding :2em;
+  display: none;
+  text-align: left;
+}
+
+#RobertSmithDescription{
+  padding :2em;
+  display: none;
+  text-align: left;
+}
+
+/*footer-----------------------*/
+
+footer{
+  padding: 2em;
+  background-color: 	#52593c; 
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color:white;
+}
+
+footer img{
+  margin: 1em;
+  max-height: 5em;
+}
+
+/*responsive-for-narrow-screens*/
+
+
+
+@media screen and (max-width: 800px){
+  header {
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    padding: 1em;
+    position:relative;
+    right:0;
+    height:100%;            
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul{
+    display:flex;
+    flex-direction: column;
+    height:100%;
+  }
+
+  .mentors{
+    margin:1em;
+    max-height: 10000px;
+  }
+
+  .mentors::-webkit-scrollbar {
+    display:none;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: unset;
   }
 }
