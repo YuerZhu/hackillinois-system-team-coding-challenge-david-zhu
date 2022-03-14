@@ -7,7 +7,7 @@ import MarySmithJPG from '../assets/Mary Smith.jpg'
 export default function mentors(props){
     function showhide(id) {
         var description = document.getElementById(id);
-        description.style.display = (description.style.display == 'block') ? 'none' : 'block';
+        description.style.display = (description.style.display === 'block') ? 'none' : 'block';
     }
     return (
         <div id = 'MarySmith' className = 'AIMentor SecMentor'>
