@@ -37,8 +37,8 @@ function App(props) {
 
   //App checks if the corresponding mentor divs are hidden, and updates the 'display' style
   useEffect(() => {
-    if(UpdateFilter != ''){
-      if(filterList.indexOf(UpdateFilter) != -1){
+    if(UpdateFilter !== ''){
+      if(filterList.indexOf(UpdateFilter) !== -1){
         filterList.splice(filterList.indexOf(UpdateFilter),1);
         hiddenList.push(UpdateFilter);
       }else{
@@ -53,7 +53,7 @@ function App(props) {
         document.querySelector('.' + filterList[i] + 'Mentor').style.display = '';
       }
     setUpdateFilter('')
-  })
+  },[UpdateFilter, filterList, hiddenList])
 
   return (
     <div className='App'>
@@ -61,10 +61,10 @@ function App(props) {
         <img src = {logo} className = 'logo' alt = 'hackIllinoisLogo' />
         <nav>
           <ul>
-              <li><a href = '#'>Home</a></li>
-              <li><a href = '#'>Mentors</a></li>
-              <li><a href = '#'>Prizes</a></li>
-              <li><a href = '#'>Schedules</a></li>
+              <li><a>Home</a></li>
+              <li><a>Mentors</a></li>
+              <li><a>Prizes</a></li>
+              <li><a>Schedules</a></li>
           </ul>
         </nav>
       </header>
