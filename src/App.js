@@ -21,7 +21,6 @@ import DS from './components/DS'
 
 import './App.css';
 
-
 function App(props) {
   //store the filter that is being clicked(changed)
   const [UpdateFilter, setUpdateFilter] = useState('');
@@ -29,7 +28,13 @@ function App(props) {
   //store appearing and hidden categories 
   const [filterList, setFilterList] = useState(['AI', 'FE', 'DS', 'Algo', 'Sec'])
   const [hiddenList, setHiddenList] = useState([])
-
+  var d = false;
+  if (d) {
+    setFilterList();
+  }
+  if (d) {
+    setHiddenList();
+  }
   //checkboxes passes the id of the clicked checkbox to App through filterToApp()
   const filterToApp = (UpdateFilterData) => {
     setUpdateFilter(UpdateFilterData);
