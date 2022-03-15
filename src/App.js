@@ -61,10 +61,10 @@ function App(props) {
         <img src = {logo} className = 'logo' alt = 'hackIllinoisLogo' />
         <nav>
           <ul>
-              <li><a>Home</a></li>
-              <li><a>Mentors</a></li>
-              <li><a>Prizes</a></li>
-              <li><a>Schedules</a></li>
+              <li><a href = "/">Home</a></li>
+              <li><a href = "/">Mentors</a></li>
+              <li><a href = "/">Prizes</a></li>
+              <li><a href = "/">Schedules</a></li>
           </ul>
         </nav>
       </header>
@@ -107,7 +107,7 @@ function App(props) {
 
 export default App;
 
-//I tried to run the following code in App, as well asuseFetch
+//I tried to run the following code in App, as well as useFetch
 //and Mentors component, but couldnt fetch anything..
 //I'll try to figure out what is wrong from now until the interview..
 
